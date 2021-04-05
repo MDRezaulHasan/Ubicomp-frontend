@@ -1,0 +1,52 @@
+<!-- <div class="row">
+    <div class="col s8 offset-s2">
+        <div class="card">
+            <div class="sm-jumbotron center-align">
+                <h2>User Registration</h2>
+            </div> -->
+<form class="col s12 white" #UserRegistrationForm="ngForm" (ngSubmit)="onSubmit(UserRegistrationForm)"
+    autocomplete="off">
+    <div class="row">
+        <div class="inout-field col s12">
+            <span class="material-icons prefix">
+                account_box
+            </span>
+            <input type="text" class="validate" name="UserName" #UserName="ngModel" placeholder="Username"
+                [(ngModel)]="user.UserName" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="inout-field col s12">
+            <span class="material-icons prefix">
+                password
+            </span>
+            <input type="password" class="validate" name="Password" #Password="ngModel" placeholder="Password"
+                [(ngModel)]="user.Password" required>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="inout-field col s12">
+            <span class="material-icons prefix">
+                email
+            </span>
+            <input type="text" class="validate" name="EmailAddress" #EmailAddress="ngModel" placeholder="Email"
+                [pattern]="emailPattern" [(ngModel)]="user.EmailAddress" required>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <span class="material-icons prefix">
+                how_to_reg
+            </span>
+            <button class="btn-large btn-submit" [disabled]="!UserRegistrationForm.valid" type="submit">
+               
+                Sign Up</button>
+        </div>
+    </div>
+</form>
+
+<!-- </div>
+    </div>
+</div> -->
